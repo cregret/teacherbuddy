@@ -6,6 +6,8 @@ const files = new Set([
   'package.json',
   'package-lock.json',
   '.gitignore',
+  '.vercelignore',
+  'vercel.json',
   '.dockerignore',
   '.env.example',
   '.editorconfig',

@@ -1,3 +1,6 @@
+import { demoStateRequest } from './demo-storage.js';
+
+const isDemo = typeof __TEACHERBUDDY_DEMO__ !== 'undefined' && __TEACHERBUDDY_DEMO__;
 const values = new Map(),
   revisions = new Map();
 let pending = Promise.resolve(),
@@ -18,6 +21,7 @@ function indicator(text, error = false) {
   node.hidden = !text;
 }
 async function request(url, options) {
+  if (isDemo) return demoStateRequest(url, options);
   const r = await fetch(url, options);
   if (!r.ok) {
     const data = await r.json().catch(() => ({}));

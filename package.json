@@ -14,6 +14,7 @@
     "data": "node scripts/data.cjs",
     "test": "node --test tests/unit/*.test.cjs tests/integration/*.test.cjs",
     "build": "node scripts/build.cjs",
+    "build:vercel": "node scripts/build-vercel.cjs",
     "format": "prettier src server scripts tests docs public/index.html public/pages *.json *.md --write",
     "format:check": "prettier src server scripts tests docs public/index.html public/pages *.json *.md --check",
     "test:visual": "node tests/browser/visual-check.cjs compare",

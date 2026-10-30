@@ -263,6 +263,12 @@ md-icon-button:not(:defined):hover {
   align-items: center;
   gap: 8px;
 }
+.demo-mode-link {
+  font-size: 12px;
+  white-space: nowrap;
+  color: #59728e;
+  padding: 6px 8px;
+}
 .legacy-topbar {
   display: none !important;
 }

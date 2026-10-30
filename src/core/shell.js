@@ -196,6 +196,14 @@ function initializeShell() {
     icon('more') +
     '</md-icon-button></div>';
   document.body.prepend(header);
+  if (typeof __TEACHERBUDDY_DEMO__ !== 'undefined' && __TEACHERBUDDY_DEMO__) {
+    const demoLink = document.createElement('a');
+    demoLink.href = 'getting-started.html';
+    demoLink.className = 'demo-mode-link';
+    demoLink.textContent = '演示版';
+    demoLink.title = '合成数据，修改仅保留在当前浏览器会话。点击安装自己的工作台。';
+    header.querySelector('.app-header-actions').prepend(demoLink);
+  }
   sidebar?.querySelectorAll('.nav-link').forEach((link) => (link.title = link.textContent.trim()));
   const logo = sidebar?.querySelector('.logo');
   if (logo) logo.remove();

@@ -1,0 +1,15 @@
+.git
+.vercel
+dist
+.env
+.env.*
+data
+node_modules
+.cache
+releases
+test-results
+*.enc.json
+*.enc.json.bak
+*.log
+*.zip
+*.tmp

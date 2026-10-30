@@ -5,11 +5,12 @@ const root = path.resolve(__dirname, '..');
 process.chdir(root);
 
 async function build() {
-  const output = path.join(root, 'public/assets');
+  const demo = process.env.TEACHERBUDDY_DEMO === '1';
+  const buildRoot = path.join(root, demo ? 'dist' : 'public');
+  const output = path.join(buildRoot, 'assets');
   for (const folder of ['js', 'css']) {
     const target = path.join(output, folder);
-    if (!target.startsWith(path.join(root, 'public') + path.sep))
-      throw Error('Invalid build output');
+    if (!target.startsWith(buildRoot + path.sep)) throw Error('Invalid build output');
     fs.rmSync(target, { recursive: true, force: true });
   }
   await esbuild.build({
@@ -23,7 +24,8 @@ async function build() {
     splitting: true,
     format: 'esm',
     target: ['es2022'],
-    outdir: 'public/assets/js',
+    outdir: path.join(output, 'js'),
+    define: { __TEACHERBUDDY_DEMO__: JSON.stringify(demo) },
     chunkNames: 'shared/[name]-[hash]',
     minify: true,
     legalComments: 'inline',
@@ -43,11 +45,15 @@ async function build() {
   }
   await esbuild.build({
     entryPoints: styleEntries,
-    outdir: 'public/assets/css',
+    outdir: path.join(output, 'css'),
     bundle: true,
     target: ['es2022'],
     legalComments: 'inline',
   });
+  if (demo) {
+    console.log('Built isolated public demo assets in dist; local preview unchanged.');
+    return;
+  }
   const manifest = {};
   function collect(directory) {
     for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
