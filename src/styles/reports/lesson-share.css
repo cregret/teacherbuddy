@@ -1,0 +1,136 @@
+:root {
+  color-scheme: light;
+  --ink: #25252c;
+  --muted: #74717e;
+  --line: #e8e4ed;
+  --accent: #79638e;
+  --paper: #fff;
+  --canvas: #f7f6f8;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font:
+    14px/1.7 -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Microsoft YaHei',
+    sans-serif;
+}
+.share-page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+.share-header {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.share-brand {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.share-intro {
+  margin: 34px 0 22px;
+  padding: 0 2px;
+}
+.share-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 7px;
+}
+.share-title-row h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.4;
+  font-weight: 650;
+}
+.share-meta {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+.copy-url {
+  flex: none;
+  padding: 8px 13px;
+  border: 1px solid #d8cfe1;
+  border-radius: 7px;
+  background: #fff;
+  color: var(--accent);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.copy-url:hover {
+  background: #f5f1f8;
+}
+.share-report {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 5px 24px #30243b08;
+}
+.share-report > div {
+  min-height: 80px;
+  padding: 24px;
+}
+.share-loading {
+  padding: 32px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.share-error {
+  margin: 20px 0;
+  padding: 16px;
+  border: 1px solid #ead4d3;
+  border-radius: 8px;
+  background: #fff7f6;
+  color: #8f4e4b;
+  font-size: 13px;
+}
+.share-footer {
+  margin-top: 20px;
+  color: #aaa5b0;
+  font-size: 10px;
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .share-page {
+    padding: 0 14px 28px;
+  }
+  .share-header {
+    height: 50px;
+  }
+  .share-intro {
+    margin: 24px 0 16px;
+  }
+  .share-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .share-title-row h1 {
+    font-size: 21px;
+  }
+  .share-report {
+    border-radius: 9px;
+  }
+  .share-report > div {
+    padding: 14px;
+  }
+}

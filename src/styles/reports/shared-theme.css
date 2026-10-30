@@ -1,0 +1,27 @@
+/* Shared reading components. Colors are supplied by each report's :host variables. */
+:where(:host) * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--deep);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.score-card .label,
+.kpi .l {
+  font-size: 11.5px;
+  color: var(--t2);
+}

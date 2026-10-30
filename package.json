@@ -1,0 +1,31 @@
+{
+  "name": "teacherbuddy",
+  "version": "0.1.0",
+  "description": "Self-hosted teaching workspace with encrypted JSON storage",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.cjs",
+    "start": "node server/index.cjs",
+    "preview": "node scripts/preview.cjs",
+    "data": "node scripts/data.cjs",
+    "test": "node --test tests/unit/*.test.cjs tests/integration/*.test.cjs",
+    "build": "node scripts/build.cjs",
+    "format": "prettier src server scripts tests docs public/index.html public/pages *.json *.md --write",
+    "format:check": "prettier src server scripts tests docs public/index.html public/pages *.json *.md --check",
+    "test:visual": "node tests/browser/visual-check.cjs compare",
+    "release:files": "node scripts/package.cjs",
+    "release:package": "node scripts/package-release.cjs",
+    "styles:audit": "node scripts/audit-styles.cjs"
+  },
+  "devDependencies": {
+    "@material/web": "^2.5.0",
+    "@playwright/test": "^1.64.1",
+    "esbuild": "^0.28.2",
+    "postcss": "^8.5.32",
+    "prettier": "^3.9.10"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "model": {
+    "groups": [
+      {
+        "id": "demo",
+        "name": "示例分组",
+        "label": "示例"
+      }
+    ],
+    "periods": [
+      {
+        "id": "demo",
+        "name": "示例分组",
+        "label": "示例",
+        "status": "active"
+      }
+    ],
+    "classes": [
+      {
+        "id": "demo-class",
+        "groupId": "demo",
+        "periodId": "demo",
+        "label": "示例班",
+        "grade": "四年级",
+        "name": "示例班",
+        "status": "active",
+        "schedule": "每周日 10:00–11:00",
+        "location": "示例教室",
+        "members": [
+          {
+            "name": "示例学生",
+            "studentId": "student-demo",
+            "profile": ""
+          }
+        ],
+        "lessons": [
+          {
+            "number": 1,
+            "date": "2026-10-25",
+            "time": "10:00–11:00",
+            "status": "recorded",
+            "prepared": true,
+            "description": "分数的意义",
+            "report": {
+              "title": "分数的意义",
+              "summary": "能识别平均分，仍需练习用图解释分数。",
+              "goal": "理解分数表示的数量关系。",
+              "next": [
+                "下次先用图形复习平均分。"
+              ],
+              "focus": [
+                {
+                  "studentId": "student-demo",
+                  "name": "示例学生",
+                  "text": "补充图示解释。"
+                }
+              ],
+              "weaknesses": [
+                "图与算式的关联需要巩固。"
+              ],
+              "highlights": [
+                "能主动说明分母的含义。"
+              ],
+              "content": [
+                "用纸条和图形理解平均分。"
+              ],
+              "homeDigest": [
+                {
+                  "label": "学习结果",
+                  "parts": [
+                    {
+                      "text": "能识别平均分，用图解释还需巩固。"
+                    }
+                  ]
+                },
+                {
+                  "label": "下节改进",
+                  "parts": [
+                    {
+                      "text": "先画图，再用语言解释。",
+                      "tone": "warn"
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "number": 2,
+            "date": "2026-11-01",
+            "time": "10:00–11:00",
+            "status": "scheduled",
+            "prepared": false,
+            "description": "分数比较"
+          }
+        ],
+        "planned": 2,
+        "brief": null
+      }
+    ],
+    "students": [
+      {
+        "id": "student-demo",
+        "name": "示例学生",
+        "profile": "",
+        "classIds": [
+          "demo-class"
+        ],
+        "sourceClass": "示例班",
+        "alerts": [
+          "作业待订正"
+        ]
+      }
+    ],
+    "payments": [],
+    "enrollments": [],
+    "leads": [],
+    "assets": [],
+    "skills": [
+      {
+        "name": "整理课节反馈",
+        "cat": "家长沟通",
+        "desc": "根据已有课堂事实整理简短反馈。",
+        "inputs": "课节、学习表现与课后建议",
+        "out": "可修改的反馈文字",
+        "text": "请根据我提供的课堂事实整理家长反馈：学了什么、表现怎样、课后配合什么。缺失内容保持缺失。"
+      }
+    ],
+    "tasks": [],
+    "issues": [],
+    "historicalTasks": [],
+    "attendance": [],
+    "consumptions": [],
+    "focusRecords": [],
+    "receivedDrafts": [],
+    "marketingArticles": [
+      {
+        "id": "demo-article",
+        "tag": "草稿",
+        "title": "为什么先画图，再列式",
+        "body": "先让学生画出数量之间的关系，再解释算式的含义。\n\n这是一篇用于体验编辑功能的合成示例文章。"
+      }
+    ],
+    "snapshot": "",
+    "home": {},
+    "classLearning": {},
+    "receivedLearning": {},
+    "financeAccounts": [
+      {
+        "id": "demo-account",
+        "name": "示例学生",
+        "studentId": "student-demo",
+        "classId": "demo-class",
+        "periodId": "demo",
+        "className": "示例班",
+        "units": 10,
+        "rate": 10000,
+        "free": false
+      }
+    ],
+    "financeEvents": [
+      {
+        "id": "demo-receipt",
+        "accountId": "demo-account",
+        "type": "receipt",
+        "date": "2026-10-01",
+        "amount": 100000,
+        "method": "银行转账",
+        "note": "合成示例收款"
+      },
+      {
+        "id": "demo-charge",
+        "accountId": "demo-account",
+        "type": "charge",
+        "date": "2026-10-25",
+        "units": 1,
+        "amount": 10000,
+        "note": "第 01 讲"
+      }
+    ]
+  },
+  "workspace": {
+    "schemaVersion": 1,
+    "lessons": [],
+    "classLearning": {
+      "demo-class": {
+        "示例学生": {
+          "classId": "demo-class",
+          "className": "示例班",
+          "period": "示例分组",
+          "studentId": "student-demo",
+          "name": "示例学生",
+          "updatedAt": "2026-10-25",
+          "state": "需要巩固",
+          "latest": "能够识别平均分。",
+          "strength": "愿意用自己的话解释。",
+          "focus": "图示解释还不完整。",
+          "judgement": "下一步用图与语言相互验证。",
+          "metrics": {
+            "到课": "1 / 1",
+            "随堂测验": "8 / 10",
+            "测验均分": "8 / 10"
+          },
+          "lessons": [
+            [
+              "第 01 讲",
+              "2026-10-25",
+              "到课",
+              "8 / 10",
+              "能够独立说明平均分。"
+            ]
+          ],
+          "sections": {
+            "作业记录": "完成练习，需补充图示。",
+            "行动方案": "用图解释一道题，再做一道同类题。",
+            "错题本": "分数图示解释。"
+          },
+          "homework": [
+            {
+              "lesson": "第 01 讲",
+              "date": "2026-10-25",
+              "status": "待订正",
+              "text": "补充图示解释。"
+            }
+          ],
+          "knowledge": [
+            {
+              "topic": "分数的意义",
+              "status": "待巩固",
+              "note": "能识别，需要补充图示依据。"
+            }
+          ]
+        }
+      }
+    },
+    "students": {},
+    "focus": [
+      {
+        "id": "demo-focus",
+        "studentId": "student-demo",
+        "classId": "demo-class",
+        "category": "待补交作业",
+        "date": "2026-10-25",
+        "detail": "已完成计算，需要补充图示解释。"
+      }
+    ],
+    "drafts": [],
+    "leads": []
+  },
+  "learning": {},
+  "resources": {},
+  "state": {}
+}

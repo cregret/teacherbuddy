@@ -1,0 +1,106 @@
+/* marketing page: layout and component styles. */
+.marketing-provenance {
+  margin: 0 24px 14px;
+  padding: 12px 16px;
+  background: #f2f6fa;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.marketing-provenance a {
+  color: #426782;
+  text-decoration: none;
+}
+.marketing-provenance small {
+  display: block;
+  color: #87929c;
+  font-size: 11px;
+}
+.marketing-view-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 0 24px 14px;
+}
+.marketing-view-tabs button {
+  border: 0;
+  background: transparent;
+  padding: 9px 14px;
+  font-size: 12px;
+  color: #72808b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.marketing-view-tabs button.active {
+  background: #e8f0fe;
+  color: #1967d2;
+}
+.marketing-article-preview {
+  padding: 10px 34px 34px;
+  max-height: 68vh;
+  overflow: auto;
+  color: #374955;
+}
+.marketing-article-preview h1 {
+  font-size: 26px !important;
+  line-height: 1.6;
+  margin: 10px 0 28px;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+.marketing-article-preview p {
+  font-size: 16px;
+  line-height: 2.1;
+  margin: 22px 0;
+}
+.marketing-article-preview figure {
+  margin: 28px 0;
+}
+.marketing-article-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.marketing-article-preview figcaption {
+  font-size: 11px;
+  color: #8996a0;
+  margin-top: 9px;
+  text-align: center;
+}
+.marketing-article-preview footer {
+  font-size: 12px;
+  line-height: 1.9;
+  border-top: 1px solid #e3e9ed;
+  padding-top: 20px;
+  margin-top: 30px;
+  color: #81909a;
+}
+.marketing-editor [hidden] {
+  display: none !important;
+}
+.marketing-actions {
+  flex-wrap: wrap;
+}
+.marketing-editor-head #marketingDraftTitle {
+  line-height: 1.5;
+}
+.marketing-view-tabs button:focus-visible {
+  outline: 2px solid #1967d2;
+  outline-offset: 2px;
+}
+@media (max-width: 760px) {
+  .marketing-provenance,
+  .marketing-view-tabs {
+    margin: 0 16px 12px;
+  }
+  .marketing-article-preview {
+    padding: 0 18px 24px;
+    max-height: 65vh;
+  }
+  .marketing-article-preview p {
+    font-size: 15px;
+  }
+  .marketing-article-preview h1 {
+    font-size: 22px !important;
+  }
+}

@@ -1,0 +1,1330 @@
+/* home page: layout and component styles. */
+
+body[data-page='home'] .top-actions .snapshot-label,
+body:where([data-page='home'])[data-page='home'] .top-actions .snapshot-label {
+  display: none !important;
+}
+.ov-course > .lesson-state-set {
+  grid-column: 3/-1;
+  justify-content: flex-end;
+}
+.ov-course .ov-review {
+  grid-column: 2/-1;
+}
+@media (max-width: 760px) {
+  .ov-course > .lesson-state-set {
+    grid-column: 2/-1;
+    justify-content: flex-start;
+  }
+}
+.ov-layout {
+  display: grid;
+}
+.ov-panel {
+  overflow: hidden;
+  background: white;
+}
+.ov-panel > header {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-bottom: 1px solid #edf0f3;
+}
+.ov-panel h2 {
+  margin: 0;
+  white-space: nowrap;
+}
+.ov-panel > header > a {
+  font-size: 11px;
+  margin-left: auto;
+  white-space: nowrap;
+  color: #1967d2;
+}
+.ov-count,
+.ov-caption {
+  white-space: nowrap;
+}
+.ov-date button {
+  border: 0;
+  background: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 5px 7px;
+}
+.ov-date input {
+  font:
+    12px Arial,
+    sans-serif;
+  border: 0;
+  background: transparent;
+}
+.ov-course {
+  display: grid;
+  border-bottom: 1px solid #eef0f4;
+}
+.ov-course:last-child {
+  border-bottom: 0;
+}
+.ov-course > time {
+  font-variant-numeric: tabular-nums;
+}
+.ov-course-name small {
+  font-weight: 400;
+}
+.ov-course-name > span {
+  display: block;
+  margin-top: 5px;
+}
+.ov-status {
+  white-space: nowrap;
+}
+.ov-empty {
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 13px;
+}
+.ov-dynamic {
+  border-bottom: 1px solid #eef0f4;
+}
+.ov-dynamic:last-child {
+  border: 0;
+}
+.ov-dynamic-top {
+  display: flex;
+}
+.ov-dynamic-top time {
+  margin-left: auto;
+  white-space: nowrap;
+}
+.ov-focus-group:last-child {
+  border: 0;
+}
+.ov-category h3 {
+  margin: 0;
+}
+.ov-focus-group.is-empty {
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 13px;
+}
+.is-empty .ov-category {
+  margin: 0;
+}
+.is-empty .ov-category > span {
+  background: none;
+  color: #a5abb3;
+}
+.ov-focus-group summary {
+  cursor: pointer;
+}
+.ov-focus-group summary span {
+  color: #1967d2;
+  margin-left: 5px;
+}
+.ov-focus-group details p {
+  font-size: 12px;
+}
+.ov-focus-group details small {
+  display: block;
+  margin-top: 3px;
+}
+#reportDialog {
+  border: 0;
+  border-radius: 20px;
+  padding: 25px;
+  max-width: 420px;
+  width: calc(100% - 40px);
+  box-shadow: 0 14px 50px #26344b25;
+  color: #303b4a;
+}
+#reportDialog::backdrop {
+  background: #24314640;
+}
+#reportDialog h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+#reportDialog p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 18px 0;
+}
+#reportDialog form {
+  text-align: right;
+}
+#reportDialog button {
+  background: #e8f0fe;
+  color: #1967d2;
+  border: 0;
+  border-radius: 20px;
+  padding: 9px 18px;
+  cursor: pointer;
+}
+.ov-panel button:focus-visible,
+.ov-panel a:focus-visible {
+  outline: 2px solid #1967d2;
+  outline-offset: 3px;
+}
+@media (max-width: 1150px) {
+  .ov-panel > header {
+    flex-wrap: wrap;
+  }
+  .ov-date {
+    order: 4;
+    width: 100%;
+    margin: 2px 0 0;
+  }
+  .ov-course {
+    gap: 9px;
+  }
+  .ov-course-name small {
+    display: block;
+    margin: 4px 0 0;
+  }
+}
+@media (max-width: 850px) {
+  .ov-date {
+    order: initial;
+    width: auto;
+    margin-left: auto;
+  }
+  .ov-panel > header > a {
+    margin-left: auto;
+  }
+}
+@media (max-width: 520px) {
+  .ov-date {
+    order: 4;
+    width: 100%;
+    margin-left: 0;
+  }
+  .ov-panel > header,
+  .ov-dynamic,
+  .ov-focus-group {
+    padding-inline: 16px;
+  }
+  .ov-dynamic-top {
+    flex-wrap: wrap;
+  }
+}
+
+.ov-focus-group details[open] {
+  font-size: 11px;
+}
+.ov-focus-group details p > a {
+  flex-shrink: 0;
+}
+.ov-focus-group details small {
+  margin: 0;
+}
+.ov-panel > header {
+  min-height: 54px;
+  padding-block: 13px;
+}
+.ov-course {
+  padding-block: 14px;
+}
+.ov-dynamic {
+  padding-block: 12px;
+}
+@media (max-height: 800px) and (min-width: 1151px) {
+  .ov-course,
+  .ov-dynamic {
+    padding-block: 10px;
+  }
+  .ov-panel > header {
+    min-height: 48px;
+    padding-block: 10px;
+  }
+  .ov-focus-group {
+    padding-block: 10px;
+  }
+}
+.ov-focus-group {
+  padding-block: 10px;
+}
+.ov-course .ov-review {
+  line-height: 1.6;
+}
+body[data-page='home'] .workspace > main,
+body[data-page='home'] .workspace {
+  background: #f4f6f9;
+}
+.ov-panel {
+  border: 1px solid #dfe5ed;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(37, 54, 78, 0.045);
+}
+.ov-panel > header {
+  padding: 14px 18px;
+  background: #fff;
+  border-bottom-color: #e5eaf1;
+}
+.ov-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  min-width: 0;
+}
+.ov-panel h2 {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #26354a;
+  letter-spacing: -0.01em;
+}
+.ov-caption {
+  color: #758195;
+}
+.ov-count {
+  font-size: 11px;
+  color: #758195;
+}
+.ov-date {
+  gap: 5px;
+}
+.ov-date button {
+  color: #526176;
+}
+.ov-date button:hover {
+  background: #edf2f8;
+}
+.ov-date input {
+  color: #3d4a5e;
+  font-variant-numeric: tabular-nums;
+}
+.ov-course {
+  padding: 15px 18px;
+  border-bottom-color: #e9edf3;
+  align-items: center;
+}
+.ov-course > time {
+  color: #40516a;
+}
+.ov-course-name > a {
+  font-weight: 600;
+  color: #26354a;
+}
+.ov-course-name small {
+  color: #77849a;
+}
+.ov-course-name > span {
+  font-size: 11px;
+  color: #707f93;
+}
+.ov-status {
+  background: #edf2f8;
+  color: #596b85;
+  border-radius: 5px;
+}
+.ov-status.done {
+  background: #eaf4ed;
+  color: #3d7550;
+}
+.ov-review {
+  color: #1a5fb4;
+}
+.ov-empty {
+  background: #fafbfd;
+  color: #748096;
+}
+.ov-dynamic {
+  padding: 15px 18px;
+  border-bottom-color: #e9edf3;
+}
+.ov-dynamic-top a {
+  font-size: 13px;
+  color: #26354a;
+  font-weight: 600;
+}
+.ov-dynamic-top time {
+  font-variant-numeric: tabular-nums;
+}
+.ov-dynamic p {
+  margin: 6px 0;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #59677a;
+  max-width: 72ch;
+}
+.ov-dynamic > a {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1762b6;
+}
+
+.ov-focus {
+  top: 12px;
+  flex-direction: column;
+}
+.ov-focus > header {
+  flex: none;
+  top: 0;
+  z-index: 2;
+}
+.ov-focus > header > a {
+  font-weight: 600;
+}
+.ov-category {
+  gap: 8px;
+}
+.ov-category h3 {
+  font-weight: 600;
+  color: #34445a;
+}
+.ov-category > span {
+  text-align: center;
+  background: #e8edf4;
+  color: #58677d;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.ov-focus-group.is-empty {
+  background: #fff;
+}
+.ov-focus-group.is-empty .ov-category h3 {
+  color: #7b8796;
+}
+.ov-student p {
+  color: #58677a;
+}
+.ov-student > a {
+  font-weight: 600;
+  color: #1a5fb4;
+}
+.ov-student > a:hover,
+.ov-dynamic > a:hover,
+.ov-review a:hover {
+  text-decoration: underline;
+}
+.ov-focus-group summary {
+  font-size: 11px;
+  font-weight: 500;
+  color: #596a81;
+  line-height: 1.6;
+}
+.ov-focus-group details p {
+  align-items: baseline;
+  gap: 8px;
+  margin: 7px 0 0;
+  border-top: 1px solid #edf0f4;
+}
+.ov-focus-group details p > a {
+  flex: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a5fb4;
+}
+.ov-focus-group details small {
+  font-size: 10px;
+  color: #748197;
+  line-height: 1.5;
+}
+.ov-muted {
+  font-size: 11px;
+  color: #7b8797;
+}
+.ov-focus-group,
+.ov-focus-group[data-category='待补测'],
+.ov-focus-group[data-category='待补交作业'],
+.ov-focus-group[data-category='成绩下滑'],
+.ov-focus-group[data-category='学习状态'],
+.ov-focus-group[data-category='信息不全'] {
+  border-bottom: 1px solid #e7ebf1;
+}
+.ov-focus-group:last-child {
+  border-bottom: 0;
+}
+.ov-focus-group details p {
+  margin-top: 6px;
+  padding-top: 6px;
+}
+body[data-page='home'] .workspace > main {
+  padding: 20px 28px 32px;
+}
+.ov-focus {
+  display: block;
+  border-color: #dbe2eb;
+}
+.ov-focus > header {
+  position: static;
+  border-bottom: 1px solid #dfe5ed;
+}
+.ov-focus > header .ov-section-title {
+  display: grid;
+  gap: 3px;
+}
+.ov-focus > header .ov-caption {
+  font-size: 10px;
+  color: #7b8797;
+}
+#overviewFocus {
+  overflow-y: auto;
+  scrollbar-color: #c3ccd8 transparent;
+  scrollbar-width: thin;
+  overscroll-behavior: auto;
+}
+.ov-focus-group {
+  background: #fff;
+  border: 1px solid #e1e6ed;
+  border-left: 3px solid #b8c3d2;
+}
+.ov-focus-group[data-category='待补测'],
+.ov-focus-group[data-category='待补交作业'],
+.ov-focus-group[data-category='成绩下滑'],
+.ov-focus-group[data-category='学习状态'],
+.ov-focus-group[data-category='信息不全'] {
+  margin: 10px 0 0;
+  padding: 12px 13px 13px;
+  border: 1px solid #e1e6ed;
+  border-left: 3px solid #b8c3d2;
+  border-radius: 10px;
+}
+.ov-focus-group[data-category='待补测'],
+.ov-focus-group[data-category='待补交作业'] {
+  background: #fffaf1;
+  border-color: #efe4ce;
+  border-left-color: #d2a24e;
+}
+.ov-focus-group[data-category='成绩下滑'] {
+  background: #fff7f5;
+  border-color: #f0e0dc;
+  border-left-color: #c97d70;
+}
+.ov-focus-group[data-category='学习状态'] {
+  background: #f5f8fd;
+  border-color: #dfe7f2;
+  border-left-color: #7e9bc2;
+}
+.ov-focus-group[data-category='信息不全'] {
+  background: #fff;
+  border-color: #e1e6ed;
+  border-left-color: #a5afbd;
+}
+.ov-category {
+  margin-bottom: 9px;
+}
+.ov-category > span {
+  min-width: 28px;
+  padding: 2px 7px;
+}
+.ov-focus-group[data-category='待补测'] .ov-category > span,
+.ov-focus-group[data-category='待补交作业'] .ov-category > span {
+  background: #f3e4c6;
+  color: #8c6424;
+}
+.ov-focus-group[data-category='成绩下滑'] .ov-category > span {
+  background: #f4dfdb;
+  color: #9b4d43;
+}
+.ov-focus-group[data-category='学习状态'] .ov-category > span {
+  background: #e2eaf5;
+  color: #4b678b;
+}
+.ov-student p {
+  font-size: 12px;
+  line-height: 1.65;
+  margin: 5px 0 6px;
+}
+.ov-student > a {
+  font-size: 11px;
+}
+@media (max-width: 1150px) {
+  .ov-layout {
+    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.95fr);
+  }
+}
+@media (max-width: 520px) {
+  #overviewFocus {
+    padding-inline: 12px;
+  }
+}
+.ov-course .ov-status {
+  justify-self: end;
+}
+.ov-review a {
+  font-size: 11px;
+  font-weight: 600;
+  color: #1a5fb4;
+}
+.ov-dynamic-link .ov-dynamic {
+  transition: background-color 0.16s ease;
+}
+.ov-dynamic-link:hover .ov-dynamic {
+  background: #f7f9fc;
+}
+.ov-dynamic-link:focus-visible {
+  outline: 2px solid #1967b4;
+  outline-offset: -3px;
+  border-radius: 8px;
+}
+.ov-focus-row-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  margin: 0;
+  padding: 9px 0 0;
+  border-top: 1px solid rgba(92, 108, 128, 0.13);
+}
+.ov-focus-row-wrap + .ov-focus-row-wrap {
+  margin-top: 9px;
+}
+.ov-focus-row {
+  display: block;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 4px 5px;
+  margin: -4px -5px;
+  cursor: pointer;
+}
+.ov-focus-person {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.ov-focus-person strong {
+  font-weight: 600;
+  color: #29384c;
+}
+.ov-focus-person small {
+  color: #77859a;
+}
+.ov-focus-row p {
+  color: #58677a;
+  margin: 4px 0 0;
+}
+.ov-focus-row:hover {
+  background: rgba(35, 94, 161, 0.045);
+}
+.ov-focus-row:hover strong,
+.ov-focus-row:hover p {
+  color: #1559a6;
+}
+.ov-focus-row:focus-visible {
+  outline: 2px solid #1967b4;
+  outline-offset: 3px;
+}
+.ov-process {
+  flex: none;
+  border: 1px solid #cfd7e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #596a80;
+  font-family: inherit;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+.ov-process:hover {
+  border-color: #9aacc3;
+  background: #f4f7fb;
+  color: #254e82;
+}
+.ov-process:active {
+  transform: translateY(1px);
+}
+.ov-process:focus-visible {
+  outline: 2px solid #1967b4;
+  outline-offset: 2px;
+}
+#focusDialog {
+  border: 1px solid #dce3eb;
+  border-radius: 14px;
+  padding: 22px;
+  max-width: 420px;
+  width: calc(100% - 36px);
+  box-shadow: 0 16px 48px rgba(32, 48, 72, 0.18);
+  color: #34445a;
+}
+#focusDialog::backdrop {
+  background: rgba(31, 44, 62, 0.32);
+}
+#focusDialog h2 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+#focusDialog p {
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 14px 0;
+  color: #5e6c7e;
+}
+#focusDialog [data-focus-name] {
+  color: #26354a;
+}
+#focusDialog .focus-dialog-error {
+  color: #a04e43;
+  margin: 0;
+}
+#focusDialog .focus-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+#focusDialog button {
+  border: 1px solid #d4dce6;
+  border-radius: 7px;
+  background: #fff;
+  color: #526176;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+#focusDialog [data-focus-confirm] {
+  background: #315f91;
+  border-color: #315f91;
+  color: #fff;
+}
+#focusDialog button:focus-visible {
+  outline: 2px solid #1967b4;
+  outline-offset: 2px;
+}
+@media (max-width: 520px) {
+  .ov-focus-row-wrap {
+    gap: 6px;
+  }
+  .ov-process {
+    padding: 6px;
+  }
+  .ov-focus-row p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 1150px) {
+  .ov-focus {
+    position: static;
+    max-height: none;
+  }
+}
+@media (max-width: 850px) {
+  body[data-page='home'] .workspace > main {
+    padding: 20px 20px 28px;
+  }
+  .ov-layout {
+    grid-template-columns: 1fr;
+  }
+  .ov-focus {
+    position: static;
+    max-height: 520px;
+  }
+}
+@media (max-width: 520px) {
+  body[data-page='home'] .workspace > main {
+    padding: 16px 12px 24px;
+  }
+  .ov-panel > header {
+    padding: 13px 14px;
+  }
+  .ov-course {
+    grid-template-columns: 82px minmax(0, 1fr) 48px;
+    padding: 13px 14px;
+    gap: 8px 10px;
+  }
+  .ov-review {
+    grid-column: 2/4;
+  }
+  .ov-focus {
+    max-height: 560px;
+  }
+  .ov-focus-group {
+    padding: 11px 12px;
+  }
+  .ov-dynamic {
+    padding: 13px 14px;
+  }
+}
+.ov-focus-row {
+  font-weight: 400 !important;
+}
+.ov-focus-row p {
+  font-weight: 400;
+}
+.ov-dynamic-link + .ov-dynamic-link {
+  border-top: 1px solid #edf0f5;
+}
+.ov-focus-group.is-empty {
+  display: none;
+}
+.ov-course .ov-status {
+  align-self: center;
+}
+.ov-course {
+  grid-template-columns: 92px minmax(0, 1fr) 48px 108px !important;
+  gap: 10px !important;
+}
+@media (max-width: 1150px) {
+  .ov-course {
+    grid-template-columns: 80px minmax(0, 1fr) 50px !important;
+  }
+  .ov-review {
+    grid-column: 2/4 !important;
+    text-align: left !important;
+  }
+}
+body.google-workspace[data-page='home'] .workspace > main {
+  padding: 28px 32px 44px;
+  background: #f4f7fb;
+}
+#dashboard {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+.ov-schedule {
+  box-shadow: none;
+  border-color: #dce4ef;
+}
+.ov-schedule .ov-section-title {
+  display: flex;
+  align-items: baseline;
+}
+.ov-schedule h2 {
+  letter-spacing: -0.02em;
+  color: #23354d;
+}
+.ov-dynamics h2,
+.ov-focus h2 {
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em;
+  color: #23354d;
+}
+.ov-schedule .ov-count {
+  color: #78879a;
+}
+.ov-date {
+  margin-left: auto;
+}
+.ov-date input {
+  width: 112px;
+  font-size: 12px;
+}
+.ov-schedule > header > a {
+  margin-left: 8px;
+  font-size: 12px;
+}
+.ov-schedule .ov-course {
+  align-items: center;
+}
+.ov-course > time {
+  font-size: 13px;
+  font-weight: 500;
+  align-self: center;
+}
+.ov-course-name > a {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.ov-course-name small {
+  display: inline;
+  font-size: 12px;
+  margin-left: 9px;
+}
+.ov-review {
+  grid-column: auto !important;
+  text-align: right !important;
+  font-size: 12px;
+}
+.ov-status {
+  justify-self: center !important;
+  align-self: center;
+  padding: 5px 8px;
+  font-size: 11px;
+  font-weight: 500;
+}
+.ov-layout {
+  grid-template-columns: minmax(0, 1fr) minmax(310px, 0.46fr);
+  gap: 26px;
+  align-items: start;
+}
+.ov-dynamics {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  min-width: 0;
+  overflow: visible;
+}
+.ov-dynamics > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 54px;
+  padding: 0 0 17px;
+  margin: 0;
+  border: 0;
+  background: transparent;
+}
+.ov-dynamics .ov-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+}
+.ov-dynamics h2 {
+  margin: 0;
+}
+.ov-caption {
+  font-size: 12px;
+}
+.ov-highlight-key {
+  display: flex;
+  gap: 13px;
+  color: #738197;
+  font-size: 11px;
+}
+.ov-highlight-key > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.ov-highlight-key > span:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 2px;
+}
+.ov-highlight-key .risk:before {
+  background: #bc625c;
+}
+.ov-highlight-key .warn:before {
+  background: #d4ac4d;
+}
+.ov-dynamic-link {
+  display: block;
+  border: 1px solid #dfe6ef !important;
+  border-radius: 13px;
+  background: white;
+  margin-bottom: 17px;
+  color: inherit;
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+.ov-dynamic-link:hover {
+  background: #fff;
+  border-color: #a9c0df !important;
+  box-shadow: 0 4px 14px #31517408;
+  text-decoration: none;
+}
+.ov-dynamic-link .ov-dynamic {
+  padding: 22px 25px !important;
+  border: 0;
+}
+.ov-dynamic-top {
+  gap: 12px;
+  align-items: center;
+}
+.ov-dynamic-top > div {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.ov-dynamic-link .ov-dynamic-top strong {
+  font-size: 17px;
+  font-weight: 600;
+  color: #263c57;
+}
+.ov-dynamic-lesson {
+  font-size: 12px;
+  color: #8390a0;
+}
+.ov-dynamic-top time {
+  font-size: 11px;
+  color: #8491a2;
+}
+.ov-dynamic-top time span {
+  margin-left: 8px;
+  color: #6383a7;
+}
+.ov-dynamic .ov-dynamic-topic {
+  font-size: 12px;
+  color: #7b899b;
+  margin: 7px 0 18px;
+  max-width: none;
+}
+.ov-digest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 26px;
+  border-top: 1px solid #edf0f5;
+  padding-top: 18px;
+}
+.ov-digest-block {
+  min-width: 0;
+}
+.ov-digest-block h3 {
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: #7a8899;
+  font-weight: 500;
+  margin: 0 0 7px;
+}
+.ov-dynamic .ov-digest-block p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #40536c;
+  margin: 0;
+  max-width: none;
+  text-wrap: pretty;
+}
+.ov-digest-block strong {
+  color: #294464;
+  font-weight: 600;
+}
+.ov-digest-block mark {
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 1px 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.ov-mark-risk {
+  color: #a74036;
+  background: #fff0ed;
+}
+.ov-mark-warn {
+  color: #775512;
+  background: #fff1c9;
+}
+.ov-focus {
+  position: static;
+  max-height: none !important;
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
+  border: 0;
+}
+.ov-focus > header {
+  height: 54px;
+  min-height: 54px;
+  padding: 0 0 17px;
+  border: 0;
+  background: transparent;
+  align-items: center;
+  gap: 10px;
+}
+.ov-focus > header > a {
+  font-size: 12px;
+}
+#overviewFocus {
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+}
+.ov-focus-group {
+  margin: 0 0 12px !important;
+  padding: 15px 16px !important;
+  border-radius: 11px !important;
+}
+.ov-category h3 {
+  font-size: 13px;
+}
+.ov-focus-row-wrap {
+  gap: 9px;
+  padding-top: 10px;
+}
+.ov-focus-person strong {
+  font-size: 13px;
+}
+.ov-focus-person small {
+  font-size: 11px;
+}
+.ov-focus-row p {
+  font-size: 12px;
+  line-height: 1.75;
+}
+.ov-process {
+  font-size: 10px;
+  font-weight: 400;
+  padding: 6px 7px;
+}
+.ov-focus-group details p {
+  display: block;
+}
+.ov-focus-group details {
+  overflow: visible;
+  max-height: none;
+}
+@media (min-width: 1600px) {
+  body.google-workspace[data-page='home'] .workspace > main {
+    padding: 34px 40px 48px;
+  }
+  .ov-layout {
+    gap: 30px;
+  }
+  .ov-dynamic-link .ov-dynamic {
+    padding: 26px 30px !important;
+  }
+  .ov-dynamic .ov-digest-block p {
+    font-size: 14px;
+  }
+  .ov-digest-block h3 {
+    font-size: 12px;
+  }
+  .ov-digest-grid {
+    gap: 23px 32px;
+  }
+  .ov-focus-row p {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1190px) {
+  body.google-workspace[data-page='home'] .workspace > main {
+    padding: 22px;
+  }
+  .ov-layout {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 18px;
+  }
+  .ov-digest-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .ov-digest-block {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 10px;
+  }
+  .ov-digest-block h3 {
+    margin: 3px 0 0;
+  }
+  .ov-schedule > header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ov-schedule .ov-date {
+    order: initial;
+    width: auto;
+  }
+  .ov-dynamic-link .ov-dynamic {
+    padding: 20px !important;
+  }
+  .ov-highlight-key {
+    gap: 8px;
+  }
+  .ov-focus-row-wrap {
+    grid-template-columns: 1fr;
+  }
+  .ov-process {
+    justify-self: end;
+    margin-top: -2px;
+  }
+  .ov-dynamics .ov-caption {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .ov-layout {
+    grid-template-columns: 1fr;
+  }
+  .ov-digest-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ov-digest-block {
+    display: block;
+  }
+  .ov-digest-block h3 {
+    margin: 0 0 6px;
+  }
+  .ov-focus-row-wrap {
+    grid-template-columns: 1fr auto;
+  }
+  .ov-process {
+    margin: 0;
+  }
+  .ov-schedule .ov-course {
+    gap: 10px !important;
+  }
+  .ov-review {
+    grid-column: 2/4 !important;
+    text-align: left !important;
+  }
+  .ov-schedule > header {
+    padding: 17px 18px;
+  }
+  .ov-schedule .ov-section-title {
+    flex-wrap: wrap;
+    gap: 5px 12px;
+  }
+  .ov-date {
+    order: 4 !important;
+    width: 100% !important;
+    margin-left: 0;
+  }
+  .ov-schedule > header > a {
+    margin-left: auto;
+  }
+  .ov-course-name small {
+    display: block;
+    margin: 3px 0 0;
+  }
+}
+@media (max-width: 540px) {
+  body.google-workspace[data-page='home'] .workspace > main {
+    padding: 16px 12px 28px;
+  }
+  .ov-course > time {
+    font-size: 11px;
+  }
+  .ov-course-name > a {
+    font-size: 14px;
+  }
+  .ov-digest-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .ov-dynamic-top > div {
+    gap: 9px;
+  }
+  .ov-dynamic-link .ov-dynamic {
+    padding: 19px !important;
+  }
+  .ov-dynamic-link .ov-dynamic-top strong {
+    font-size: 16px;
+  }
+  .ov-highlight-key {
+    font-size: 10px;
+  }
+  .ov-focus-row-wrap {
+    grid-template-columns: 1fr;
+  }
+  .ov-process {
+    margin-top: 3px;
+  }
+  .ov-dynamics .ov-section-title {
+    gap: 8px;
+  }
+  .ov-dynamic-top time span {
+    display: none;
+  }
+}
+@media (max-height: 800px) and (min-width: 951px) {
+  .ov-schedule > header {
+    min-height: 58px;
+    padding-block: 14px;
+  }
+  .ov-schedule .ov-course {
+    min-height: 88px;
+    padding-block: 13px !important;
+  }
+  .ov-schedule {
+    margin-bottom: 23px;
+  }
+  .ov-dynamic-link .ov-dynamic {
+    padding: 20px 23px !important;
+  }
+  .ov-digest-grid {
+    gap: 15px 23px;
+    padding-top: 15px;
+  }
+  .ov-dynamic .ov-digest-block p {
+    line-height: 1.75;
+  }
+  .ov-dynamic .ov-dynamic-topic {
+    margin-bottom: 15px;
+  }
+}
+.ov-schedule {
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+.ov-schedule > header {
+  padding: 14px 20px;
+  min-height: 54px;
+  border-bottom: 1px solid #edf0f3;
+  gap: 12px;
+}
+.ov-schedule h2 {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+.ov-schedule .ov-section-title {
+  gap: 10px;
+}
+.ov-schedule .ov-count {
+  font-size: 11px;
+}
+.ov-schedule .ov-course {
+  grid-template-columns: 112px minmax(0, 1fr) 58px 142px !important;
+  gap: 10px 13px !important;
+  min-height: 74px;
+  padding: 15px 20px !important;
+}
+.ov-schedule .ov-course > time {
+  font-size: 12px;
+  font-weight: 400;
+}
+.ov-schedule .ov-course-name > a {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ov-schedule .ov-course-name small {
+  font-size: 11px;
+  margin-left: 6px;
+}
+.ov-schedule .ov-course-name > span {
+  font-size: 11px;
+  margin-top: 5px;
+  color: #7b8798;
+}
+.ov-schedule .ov-status {
+  padding: 3px 5px;
+  font-size: 10px;
+  font-weight: 400;
+  background: #f1f5fb;
+  color: #687c9b;
+}
+.ov-schedule .ov-status.done {
+  background: #edf5ef;
+  color: #477b59;
+}
+.ov-schedule .ov-review {
+  font-size: 11px;
+}
+@media (max-width: 950px) {
+  .ov-schedule .ov-course {
+    grid-template-columns: 90px minmax(0, 1fr) 50px !important;
+  }
+  .ov-schedule .ov-review {
+    grid-column: 2/4 !important;
+    text-align: left !important;
+  }
+  .ov-schedule .ov-course-name small {
+    display: inline;
+  }
+  .ov-schedule .ov-date {
+    order: initial !important;
+    width: auto !important;
+    margin-left: auto;
+  }
+}
+@media (max-width: 540px) {
+  .ov-schedule > header {
+    padding: 14px 16px;
+    flex-wrap: wrap;
+  }
+  .ov-schedule .ov-date {
+    order: 4 !important;
+    width: 100% !important;
+    margin-left: 0;
+  }
+  .ov-schedule .ov-course {
+    padding: 14px 16px !important;
+    grid-template-columns: 76px minmax(0, 1fr) 48px !important;
+  }
+  .ov-schedule .ov-course > time {
+    font-size: 11px;
+  }
+}

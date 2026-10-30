@@ -1,0 +1,14 @@
+node_modules
+.git
+.env
+.env.*
+data
+*.log
+*.zip
+.migration-*
+tests
+
+.cache
+releases
+src
+scripts

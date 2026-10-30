@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="TeacherBuddy 教师工作记录台" />
+    <title>首页 · teacherbuddy</title>
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/home.css" />
+    <script type="module" src="/assets/js/home.js"></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#channel">跳到主要内容</a>
+    <aside class="sidebar"></aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="breadcrumb"><strong>首页</strong><span>/</span><span>记录总览</span></div>
+        <div class="top-actions">
+          <span class="snapshot-label" id="sourceSnapshot">教学记录</span
+          ><button id="refresh" class="button" type="button">重新读取</button>
+        </div>
+      </header>
+      <main id="channel">
+        <div id="loadState" class="load-state" role="status">正在读取记录…</div>
+        <div id="dashboard" hidden></div>
+      </main>
+    </div>
+  </body>
+</html>

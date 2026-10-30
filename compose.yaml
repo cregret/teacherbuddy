@@ -1,0 +1,13 @@
+services:
+  teacherbuddy:
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      DATA_KEY: ${DATA_KEY:?Run npm run setup first}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Run npm run setup first}
+    volumes:
+      - teacherbuddy-data:/data
+    restart: unless-stopped
+volumes:
+  teacherbuddy-data:

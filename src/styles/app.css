@@ -1,0 +1,5 @@
+/* Shared application stylesheet. Keep foundational imports in this order. */
+@import './core/tokens.css';
+@import './core/base.css';
+@import './core/workspace.css';
+@import './core/components.css';

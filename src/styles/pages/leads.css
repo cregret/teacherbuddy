@@ -1,0 +1,346 @@
+/* leads page: layout and component styles. */
+body.google-workspace[data-page='leads'] .workspace > main.lead-list-page {
+  display: block;
+  overflow: auto;
+  height: 100%;
+  padding: 24px 28px 40px;
+  max-width: none;
+}
+.ll-stages {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border-bottom: 1px solid #dce4ed;
+  margin: 0 0 20px;
+  padding: 0 0 12px;
+  flex-wrap: wrap;
+}
+.ll-stages button {
+  border: 0;
+  background: transparent;
+  padding: 11px 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 7px;
+  color: #61738b;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.ll-stages button span {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: #8491a2;
+}
+.ll-stages button[aria-pressed='true'] {
+  background: #e8effa;
+  color: #254d7d;
+  font-weight: 600;
+}
+.ll-stages button[aria-pressed='true'] span {
+  color: #254d7d;
+}
+.ll-stages button:last-child {
+  margin-left: auto;
+}
+.ll-surface {
+  background: white;
+  border: 1px solid #dfe6ee;
+  border-radius: 12px;
+  overflow: clip;
+}
+.ll-toolbar {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #e5ebf1;
+  flex-wrap: wrap;
+}
+.ll-toolbar label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: #77879a;
+}
+.ll-toolbar input,
+.ll-toolbar select {
+  border: 1px solid #dce4ed;
+  border-radius: 6px;
+  min-height: 36px;
+  padding: 7px 10px;
+  color: #344b64;
+  font: inherit;
+}
+.ll-search {
+  flex: 1;
+  min-width: 240px;
+}
+.ll-search input {
+  width: 100%;
+  max-width: 360px;
+}
+.ll-count {
+  font-size: 12px;
+  color: #8592a2;
+  margin-left: auto;
+  white-space: nowrap;
+}
+.ll-table {
+  table-layout: fixed;
+  font-size: 13px;
+  color: #40556e;
+}
+.ll-table th {
+  background: #f5f7fa;
+  text-align: left;
+  padding: 13px 18px;
+  color: #77879a;
+  font-weight: 500;
+  font-size: 11px;
+}
+.ll-table td {
+  padding: 22px 18px;
+  border-top: 1px solid #e8edf3;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.ll-col-person {
+  width: 15%;
+}
+.ll-col-need {
+  width: 25%;
+}
+.ll-col-stage {
+  width: 12%;
+}
+.ll-col-contact {
+  width: 24%;
+}
+.ll-col-next {
+  width: 20%;
+}
+.ll-col-toggle {
+  width: 4%;
+}
+.ll-table th:last-child,
+.ll-table td:last-child {
+  padding-left: 0;
+  padding-right: 12px;
+}
+.ll-table p {
+  margin: 0;
+  line-height: 1.85;
+}
+.ll-name {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: #27415e;
+  cursor: pointer;
+  text-align: left;
+}
+.ll-table small {
+  display: block;
+  font-size: 11px;
+  color: #8794a4;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+.ll-table time {
+  font-size: 11px;
+  color: #8a98a8;
+  display: block;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+.ll-table .ll-next {
+  color: #4e6c61;
+}
+.ll-stage {
+  display: inline-block;
+  border-radius: 4px;
+  background: #f0f3f7;
+  color: #687b90;
+  padding: 4px 7px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.ll-stage.intent {
+  background: #fcf1d9;
+  color: #90672b;
+}
+.ll-stage.enrolled {
+  background: #edf6ef;
+  color: #52765d;
+}
+.ll-toggle {
+  border: 1px solid #e1e7ef;
+  background: transparent;
+  border-radius: 5px;
+  width: 26px;
+  height: 26px;
+  color: #6d829c;
+  cursor: pointer;
+  font-size: 16px;
+}
+.ll-row {
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.ll-row:hover,
+.ll-row.is-open {
+  background: #f7faff;
+}
+.ll-muted {
+  color: #95a0ae;
+  font-size: 12px;
+}
+.ll-expanded td {
+  padding: 0 !important;
+}
+.ll-record {
+  padding: 22px 24px 26px 34px;
+  background: #f6f9fc;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 48px;
+  border-left: 3px solid #8fa8c8;
+}
+.ll-record h3 {
+  font-size: 12px;
+  color: #4b6380;
+  margin: 0 0 13px;
+  font-weight: 600;
+}
+.ll-record ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 14px;
+}
+.ll-record li {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+}
+.ll-record li time {
+  margin: 3px 0;
+}
+.ll-record p {
+  font-size: 12px;
+}
+.ll-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  font-size: 12px;
+}
+.ll-links a {
+  color: #4777ab;
+}
+.ll-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #64778e;
+}
+.ll-empty[hidden] {
+  display: none;
+}
+.ll-empty strong {
+  font-weight: 500;
+}
+.ll-empty p {
+  font-size: 12px;
+}
+.ll-empty button {
+  border: 1px solid #dbe4ef;
+  border-radius: 6px;
+  background: white;
+  color: #4673a4;
+  padding: 8px 13px;
+  cursor: pointer;
+}
+.ll-visually-hidden {
+  position: absolute;
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.ll-stages button:hover {
+  background: #f0f4fa;
+}
+.lead-list-page button:focus-visible,
+.lead-list-page input:focus-visible,
+.lead-list-page select:focus-visible {
+  outline: 2px solid #7799c7;
+  outline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .ll-table-wrap {
+    overflow-x: auto;
+  }
+  .ll-table {
+    min-width: 940px;
+  }
+  .ll-toolbar {
+    gap: 12px;
+  }
+  .ll-table td {
+    padding: 18px 13px;
+  }
+  .ll-table th {
+    padding: 12px 13px;
+  }
+}
+@media (max-width: 700px) {
+  body.google-workspace[data-page='leads'] .workspace > main.lead-list-page {
+    padding: 14px;
+  }
+  .ll-stages {
+    gap: 2px;
+  }
+  .ll-stages button {
+    padding: 9px;
+    font-size: 12px;
+  }
+  .ll-stages button:last-child {
+    margin-left: 0;
+  }
+  .ll-search {
+    flex-basis: 100%;
+  }
+  .ll-record {
+    gap: 18px;
+    grid-template-columns: 1fr;
+  }
+  .ll-toolbar {
+    padding: 14px;
+  }
+}
+.lead-list-page .ll-table td {
+  white-space: normal !important;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+.lead-list-page .ll-table td p {
+  white-space: normal !important;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+.ll-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.ll-table .ll-record {
+  white-space: normal;
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="用 WorkBuddy 在自己的电脑安装 TeacherBuddy 和两个教学 Skills，开始建立班级、整理学情。"
+    />
+    <title>开始使用 · TeacherBuddy</title>
+    <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/css/getting-started.css" />
+    <script type="module" src="/assets/js/workspace.js"></script>
+  </head>
+  <body data-page="getting-started">
+    <a class="skip-link" href="#channel">跳到主要内容</a>
+    <aside class="sidebar"></aside>
+    <div class="workspace">
+      <header class="topbar">
+        <span id="sourceSnapshot"></span
+        ><button id="refreshChannel" class="button" type="button">重新读取</button>
+      </header>
+      <main id="channel"><div class="load-state">正在加载…</div></main>
+    </div>
+    <div id="statusToast" class="status-toast" role="status" hidden></div>
+  </body>
+</html>

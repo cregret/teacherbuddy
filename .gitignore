@@ -1,0 +1,16 @@
+node_modules/
+.env
+.env.*
+!.env.example
+data/
+*.enc.json
+*.enc.json.bak
+*.log
+*.tmp
+*.zip
+.migration-*
+*-preview.png
+test-results/
+
+.cache/
+releases/

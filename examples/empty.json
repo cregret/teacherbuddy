@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "model": {
+    "groups": [],
+    "periods": [],
+    "classes": [],
+    "students": [],
+    "payments": [],
+    "enrollments": [],
+    "leads": [],
+    "assets": [],
+    "skills": [],
+    "tasks": [],
+    "issues": [],
+    "historicalTasks": [],
+    "attendance": [],
+    "consumptions": [],
+    "focusRecords": [],
+    "receivedDrafts": [],
+    "marketingArticles": [],
+    "snapshot": "",
+    "home": {},
+    "classLearning": {},
+    "receivedLearning": {},
+    "financeAccounts": [],
+    "financeEvents": []
+  },
+  "workspace": {
+    "schemaVersion": 1,
+    "lessons": [],
+    "classLearning": {},
+    "students": {},
+    "focus": [],
+    "drafts": [],
+    "leads": []
+  },
+  "learning": {},
+  "resources": {},
+  "state": {}
+}

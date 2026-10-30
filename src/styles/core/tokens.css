@@ -1,0 +1,80 @@
+/* Shared application design variables. Component scopes retain their own inheritance. */
+:root {
+  --white: #fff;
+  --amber: #b89b58;
+  --amber-bg: #fbf7e9;
+  --red: #be8e86;
+  --red-bg: #fbf1ef;
+  --ink: #202124;
+  --text: #3c4043;
+  --muted: #747b82;
+  --line: #e1e5ea;
+  --green: #1967d2;
+  --soft: #e8f0fe;
+  --paper: #f6f8fc;
+  --md-sys-color-primary: #0b57d0;
+  --md-sys-color-on-primary: #fff;
+  --md-sys-color-secondary-container: #d3e3fd;
+  --md-sys-color-on-secondary-container: #041e49;
+  --md-sys-color-surface: #f6f8fc;
+  --md-sys-color-on-surface: #202124;
+  --md-sys-color-on-surface-variant: #444746;
+  --md-sys-color-outline: #747775;
+}
+:root:where(:has(body[data-page='home'])) {
+  --amber: #926328;
+  --amber-bg: #fbf2e3;
+  --red: #a44937;
+  --red-bg: #fbefeb;
+}
+.tone-blue {
+  --cover: #dfeafb;
+  --cover-ink: #24538c;
+}
+.tone-green {
+  --cover: #e0eee3;
+  --cover-ink: #386747;
+}
+.tone-sand {
+  --cover: #f6ebd8;
+  --cover-ink: #8c682b;
+}
+.tone-rose {
+  --cover: #f4e3e4;
+  --cover-ink: #915354;
+}
+.tone-teal {
+  --cover: #dcefed;
+  --cover-ink: #386f6b;
+}
+.tone-slate {
+  --cover: #e6e8f1;
+  --cover-ink: #575c82;
+}
+.workpages {
+  --work-ink: #202124;
+  --work-muted: #657080;
+  --work-line: #e5e9ef;
+  --work-blue: #0b57d0;
+  --work-tint: #edf3fe;
+}
+body.google-workspace {
+  --ink: #25364a;
+  --muted: #718096;
+  --line: #e2e8f0;
+  --surface: #f4f7fb;
+}
+body:where(:not([data-page='home'])).google-workspace {
+  --ui-canvas: #f6f7f9;
+  --ui-panel: #fff;
+  --ui-text: #303640;
+  --ui-secondary: #707986;
+  --ui-line: #e5e8ed;
+  --ui-accent: #315f91;
+  --ui-selected: #edf3fa;
+  --ink: var(--ui-text);
+  --text: var(--ui-text);
+  --muted: var(--ui-secondary);
+  --line: var(--ui-line);
+  --surface: var(--ui-canvas);
+}
