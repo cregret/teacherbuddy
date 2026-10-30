@@ -1,4 +1,4 @@
-import{c as e}from"./chunk-DCJ4ZX5Q.js";var h=`/* Shared reading components. Colors are supplied by each report's :host variables. */
+import{c as e}from"./chunk-GDLLRSR6.js";var h=`/* Shared reading components. Colors are supplied by each report's :host variables. */
 :where(:host) * {
   margin: 0;
   padding: 0;

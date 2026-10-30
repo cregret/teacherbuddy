@@ -2,7 +2,7 @@
 
 可自行部署的教师工作台，包含日程、班课、学生、缴费课消、营销、潜客和 Skills 指令。
 
-[在线演示](https://teacherbuddy-one.vercel.app) · 合成数据，修改仅保留在当前浏览器会话。
+[在线演示](https://teacherbuddy-one.vercel.app) · 脱敏测试数据，修改仅保留在当前浏览器会话。
 
 **不懂代码？从[用 WorkBuddy 开始使用](docs/getting-started.md)入门。** 下载、复制一段话，交给 WorkBuddy 安装；页面左下角也有「开始使用」。项目和两个 Skills 免费开源，本机运行无需购买服务器。WorkBuddy 的 AI 调用受账号额度限制。
 
@@ -33,7 +33,7 @@ npm start
 
 ## Vercel 公开演示
 
-仓库提供 `vercel.json`，Vercel 执行 `npm run build:vercel`，发布 `dist/`。演示构建只使用仓库中的合成数据，不读取 `.env` 或本机 `data/`；构建输出不会覆盖本地预览。访客的修改保存在自己的浏览器会话中，不会写入共享服务器，关闭会话后可重新开始。
+仓库提供 `vercel.json`，Vercel 执行 `npm run build:vercel`，发布 `dist/`。演示构建只使用仓库中已脱敏的完整测试数据，不读取 `.env` 或本机 `data/`；构建输出不会覆盖本地预览。访客的修改保存在自己的浏览器会话中，不会写入共享服务器，关闭会话后可重新开始。
 
 这是公开体验与下载安装入口，不是保存真实教学数据的云端工作区。正式使用请按入门说明部署本地版，或另行接入持久化云存储与登录权限。
 

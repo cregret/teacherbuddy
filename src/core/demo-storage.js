@@ -1,8 +1,15 @@
-const KEY = 'teacherbuddy.public-demo.v1';
+const KEY = 'teacherbuddy.public-demo.v2';
 
-export function demoStateRequest(url, options = {}) {
+export async function demoStateRequest(url, options = {}) {
   if (!url.startsWith('/api/state')) throw Error('Unsupported demo operation');
-  const state = JSON.parse(sessionStorage.getItem(KEY) || '{}');
+  let saved = sessionStorage.getItem(KEY);
+  if (!saved) {
+    const response = await fetch('/api/state', { cache: 'no-store' });
+    if (!response.ok) throw Error('演示初始记录加载失败');
+    saved = JSON.stringify(await response.json());
+    sessionStorage.setItem(KEY, saved);
+  }
+  const state = JSON.parse(saved);
   if (!options.method || options.method === 'GET') return Promise.resolve(state);
   const key = decodeURIComponent(url.slice('/api/state/'.length));
   const input = JSON.parse(options.body);
