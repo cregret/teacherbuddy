@@ -2,6 +2,8 @@
 
 可自行部署的教师工作台，包含日程、班课、学生、缴费课消、营销、潜客和 Skills 指令。
 
+[在线演示](https://teacherbuddy-one.vercel.app) · 合成数据，修改仅保留在当前浏览器会话。
+
 **不懂代码？从[用 WorkBuddy 开始使用](docs/getting-started.md)入门。** 下载、复制一段话，交给 WorkBuddy 安装；页面左下角也有「开始使用」。项目和两个 Skills 免费开源，本机运行无需购买服务器。WorkBuddy 的 AI 调用受账号额度限制。
 
 发布版 `teacherbuddy.zip` 包含构建资源，安装 Node.js 22 或更新版本后即可运行，无需先安装开发依赖。两个教学技能的下载和导入方式见 [Skills 包说明](docs/skills-package.md)。
